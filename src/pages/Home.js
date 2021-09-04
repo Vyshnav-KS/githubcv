@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
 		border: "1px solid #0A4A58",
 		borderRadius: 15,
 		background: "transparent",
-		marginTop: 26,
+		marginTop: 0,
 		textAlign: "center",
 		cursor: "pointer",
 	},
@@ -278,7 +278,7 @@ const styles = StyleSheet.create({
 	rightContents: {
 		height: 587,
 		width: 487,
-		marginTop: 131,
+		marginTop: 100,
 		marginLeft: 59,
 	},
 	nameSection: {
