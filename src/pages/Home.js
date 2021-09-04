@@ -109,15 +109,21 @@ const Home = () => {
 							<div className={css(styles.socials)}>
 								<div className={css(styles.socialIcons)}>
 									<img src={Web} alt="" className={css(styles.iconStyle)} />
-									<span className={css(styles.desc)}>{website}</span>
+									<span className={css(styles.desc)}>
+										{website === "" ? "Null" : website}
+									</span>
 								</div>
 								<div className={css(styles.socialIcons)}>
 									<img src={Twt} alt="" className={css(styles.iconStyle)} />
-									<span className={css(styles.desc)}>{tuname}</span>
+									<span className={css(styles.desc)}>
+										{tuname === null ? "Null" : tuname}
+									</span>
 								</div>
 								<div className={css(styles.socialIcons)}>
 									<img src={Mail} alt="" className={css(styles.iconStylem)} />
-									<span className={css(styles.desc)}>{email}</span>
+									<span className={css(styles.desc)}>
+										{email == null ? "Null" : email}
+									</span>
 								</div>
 							</div>
 							<div className={css(styles.btnsec)}>
