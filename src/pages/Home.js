@@ -20,7 +20,7 @@ const Home = () => {
 	const [email, setEmail] = useState("");
 	const [website, setWebsite] = useState("");
 	const [error, setError] = useState(null);
-	// const [profile, setProfile] = useState("");
+	const [profile, setProfile] = useState("");
 
 	useEffect(() => {
 		fetch("https://api.github.com/users/example")
@@ -42,7 +42,7 @@ const Home = () => {
 		twitter_username,
 		blog,
 		email,
-		// html_url,
+		html_url,
 	}) => {
 		setName(name);
 		setUserName(login);
@@ -54,7 +54,7 @@ const Home = () => {
 		setTuname(twitter_username);
 		setWebsite(blog);
 		setEmail(email);
-		// setProfile(html_url);
+		setProfile(html_url);
 	};
 
 	const handleSearch = (e) => {
@@ -117,7 +117,12 @@ const Home = () => {
 								</div>
 							</div>
 							<div className={css(styles.btnsec)}>
-								<button className={css(styles.button)}>
+								<button
+									className={css(styles.button)}
+									onClick={() => {
+										window.location.href = profile;
+									}}
+								>
 									<img src={Ghub} alt="" className={css(styles.buttonimg)} />
 								</button>
 							</div>
