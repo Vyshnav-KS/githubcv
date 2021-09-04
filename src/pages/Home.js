@@ -20,7 +20,7 @@ const Home = () => {
 	const [email, setEmail] = useState("");
 	const [website, setWebsite] = useState("");
 	const [error, setError] = useState(null);
-	const [profile, setProfile] = useState("");
+	// const [profile, setProfile] = useState("");
 
 	useEffect(() => {
 		fetch("https://api.github.com/users/example")
@@ -42,7 +42,7 @@ const Home = () => {
 		twitter_username,
 		blog,
 		email,
-		html_url,
+		// html_url,
 	}) => {
 		setName(name);
 		setUserName(login);
@@ -54,7 +54,7 @@ const Home = () => {
 		setTuname(twitter_username);
 		setWebsite(blog);
 		setEmail(email);
-		setProfile(html_url);
+		// setProfile(html_url);
 	};
 
 	const handleSearch = (e) => {
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
 		display: "flex",
 		flexDirection: "row",
 		marginTop: 30,
-		height: 850,
+		height: 750,
 		width: 1200,
 		borderRadius: 15,
 		// filter: "blur(4px)",
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
 		marginTop: "0px !important",
 		textAlign: "left",
 		width: 414,
-		height: 850,
+		height: 750,
 		borderRadius: 15,
 		background:
 			"linear-gradient(141.57deg, rgba(255, 255, 255, 0.7) 0.88%, rgba(255, 255, 255, 0.3) 77.88%)",
