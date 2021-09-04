@@ -109,13 +109,23 @@ const Home = () => {
 							<div className={css(styles.socials)}>
 								<div className={css(styles.socialIcons)}>
 									<img src={Web} alt="" className={css(styles.iconStyle)} />
-									<span className={css(styles.desc)}>
+									<span
+										className={css(styles.desc)}
+										onClick={() => {
+											window.location.href = Web;
+										}}
+									>
 										{website === "" ? "Null" : website}
 									</span>
 								</div>
 								<div className={css(styles.socialIcons)}>
 									<img src={Twt} alt="" className={css(styles.iconStyle)} />
-									<span className={css(styles.desc)}>
+									<span
+										className={css(styles.desc)}
+										onClick={() => {
+											window.location.href = `https://twitter.com/${Twt}`;
+										}}
+									>
 										{tuname === null ? "Null" : tuname}
 									</span>
 								</div>
@@ -271,6 +281,7 @@ const styles = StyleSheet.create({
 		fontStyle: "normal",
 		marginLeft: 20,
 		color: "#0A4A58",
+		cursor: "pointer",
 	},
 	btnsec: {
 		textAlign: "center",
