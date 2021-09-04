@@ -5,7 +5,7 @@ import Ghub from "../ghub.png";
 import Mail from "../mail.png";
 import Web from "../web.png";
 import Twt from "../twitter.png";
-// import { Image } from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
 
 const Home = () => {
 	const [name, setName] = useState("");
@@ -79,7 +79,11 @@ const Home = () => {
 			<div className={css(styles.search)}>
 				<Form onSubmit={handleSubmit}>
 					<Form.Group>
-						<Form.Input onChange={handleSearch} placeholder="Github userame" />
+						<Form.Input
+							onChange={handleSearch}
+							placeholder="Github userame"
+							className={css(styles.inputFd)}
+						/>
 
 						<Form.Button content="Submit" />
 					</Form.Group>
@@ -184,15 +188,15 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
-	// img: {
-	// 	width: 100,
-	// 	height: 100,
-	// },
+
+	search: {
+		marginTop: 10,
+	},
 
 	container: {
 		display: "flex",
 		flexDirection: "row",
-		marginTop: 30,
+		marginTop: 5,
 		height: 750,
 		width: 1200,
 		borderRadius: 15,
